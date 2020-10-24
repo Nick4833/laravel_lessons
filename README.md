@@ -4,7 +4,7 @@ A collection of laravel lessons.
 
 ## Installation
 
-Use the Composer [Composer](https://getcomposer.org/) to install project.
+Use the [Composer](https://getcomposer.org/) to install project.
 
 ```composer
 php artisan migrate
