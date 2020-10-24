@@ -1,23 +1,30 @@
 @extends('include.master')
 @section('content')
 
-<table border="1" cellpadding="10">
-	<tr>
-		<th>Roll Number</th>
-		<th>Name</th>
-		<th>Email</th>
-		<th>Phone Number</th>
-		<th>Address</th>
-	</tr>
-	@foreach ($students as $student)
-	<tr>
-		<td>{{ $student->rollno }}</td>
-		<td>{{ $student->name }}</td>
-		<td>{{ $student->email }}</td>
-		<td>{{ $student->phoneno }}</td>
-		<td>{{ $student->address }}</td>
-	</tr>
-	@endforeach
-</table>
+<div class="container table-responsive mt-5">
+	<h1>Student List</h1>
+	<table class="table table-bordered table-hover">
+		<thead>
+			<tr>
+				<th scope="col"># Roll Number</th>
+				<th scope="col">Name</th>
+				<th scope="col">Email</th>
+				<th scope="col">Phone</th>
+				<th scope="col">Address</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach ($students as $student)
+			<tr>
+				<th scope="row">{{ $student->rollno }}</th>
+				<td>{{ $student->name }}</td>
+				<td>{{ $student->email }}</td>
+				<td>{{ $student->phoneno }}</td>
+				<td>{{ $student->address }}</td>
+			</tr>
+			@endforeach
+		</tbody>
+	</table>
+</div>
 
 @endsection
